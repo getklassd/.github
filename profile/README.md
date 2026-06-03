@@ -37,8 +37,11 @@ public class HomePage : PageBase
 - 🔐 **Auth built in** — backoffice cookie auth + OIDC/SAML SSO seam
 - 📦 **Headless** — public delivery API; render with any frontend, or none
 
-### Repositories
+### Coming soon
 
-- **[Klassd](https://github.com/getklassd/Klassd)** — the engine, adapters, and sample host
+Klassd is in private development ahead of its first public release. The engine, storage/media
+adapters, and a sample host will be published here — open source, MIT licensed — when it ships.
+
+⭐ **Watch this space.** Public packages and source are on the way.
 
 > Built with .NET 10 and Blazor. MIT licensed.
