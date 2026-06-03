@@ -1,4 +1,9 @@
-<h1 align="center">Klassd</h1>
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/getklassd/.github/main/profile/assets/klassd-wordmark.png">
+    <img alt="Klassd" src="https://raw.githubusercontent.com/getklassd/.github/main/profile/assets/klassd-wordmark-light.png" width="360">
+  </picture>
+</p>
 
 <p align="center">
   <strong>A code-first, NuGet-distributed headless CMS for .NET.</strong><br>
