@@ -25,8 +25,9 @@
 |---|---|---|
 | **Klassd** | A code-first, headless **CMS** for .NET. Declare pages, blocks and property types as C# classes; the engine reflects over them to drive a Blazor admin and a headless JSON API — no content-type designer, no hand-written migrations, no JS build step. | [repo](https://github.com/getklassd/Klassd) · [docs](https://getklassd.com/docs) · [NuGet](https://www.nuget.org/profiles/getklassd) |
 | **Klassd.Workflows** | A code-first background-job & **workflow engine** for .NET. Jobs are C# classes that run as their own Kubernetes pod (or a local process in dev); compose them into DAG workflows and watch each run live. | [repo](https://github.com/getklassd/Klassd.Workflows) · [docs](https://getklassd.com/workflows) · [NuGet](https://www.nuget.org/profiles/getklassd) |
+| **Klassd.Auth** | A self-hostable **authentication** core for .NET — email/password, sessions, social login & SSO (OIDC, Microsoft Entra ID), MFA and per-user metadata, behind storage-agnostic SQLite / PostgreSQL / MongoDB adapters. Powers sign-in for Klassd and Klassd.Workflows. | [repo](https://github.com/getklassd/Klassd.Auth) · [docs](https://getklassd.com/auth) · [NuGet](https://www.nuget.org/profiles/getklassd) |
 
-Both are in **public beta** (`0.0.x`), MIT licensed, and published to NuGet.org.
+All three are in **public beta** (`0.0.x`), MIT licensed, and published to NuGet.org.
 
 ### The idea
 
@@ -55,7 +56,7 @@ public sealed class NightlyReport : IJob
 - 🧩 **Code-first** — model content and jobs in C#, refactor in your IDE, not a web form
 - 🔌 **Pluggable** — swap storage (MongoDB / PostgreSQL / SQLite), media (FileSystem / S3 / GCS) and artifact backends
 - ☸️ **Cloud-native** — Klassd.Workflows runs each job as its own Kubernetes pod, the same worker runs locally
-- 🔐 **Auth built in** — backoffice cookie auth + OIDC/SAML SSO seam
+- 🔐 **Auth as a building block** — Klassd.Auth: email/password, sessions, OIDC/Entra SSO and MFA, used by both the CMS and Workflows
 - 📦 **Headless & NuGet-native** — public delivery API; compose only the packages you wire up
 
 ### Get started
@@ -67,6 +68,10 @@ dotnet add package Klassd.Data.Sqlite --prerelease
 
 # The workflow engine
 dotnet add package Klassd.Workflows.Core --prerelease
+
+# Authentication
+dotnet add package Klassd.Auth.Core --prerelease
+dotnet add package Klassd.Auth.AspNetCore.Cookies --prerelease
 ```
 
 Full quickstarts, screenshots and guides are at **[getklassd.com](https://getklassd.com)**.
